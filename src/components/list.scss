@@ -1,0 +1,44 @@
+@import '../scss/variables';
+@import '../scss/mixins';
+.anaDiv{
+    @include flex(column,center,2rem,center);
+    // border:2px solid red;
+    width:$fixed-width;
+    margin: auto;
+    border-radius: $radius;
+    box-shadow: $dark-shadow;
+    background-color: $clr-grey-3;
+    padding: .5rem;
+    h1{
+        color:$clr-black;
+    }
+
+    .imgCard{
+        // border: 2px solid red;
+        @include flex(row,center,3rem,center);
+        padding: rem;
+        // line-height: 1.5rem;
+        padding: .0rem;
+        color: $clr-grey-9;
+        border-radius: $radius;
+        justify-content: flex-start;
+        transition: $transition;
+        cursor: pointer;
+        &:hover{
+            transform: scale(.9);
+        }
+        
+        & img{
+            border-radius: 50%;
+            box-shadow: $dark-shadow;
+            // text-align: left;
+
+        }
+        .infoCard{
+            @include flex(column,flex-start,.5rem,flex-start);
+            max-width: 180px;
+            overflow: visible;
+            
+        }
+    }
+}

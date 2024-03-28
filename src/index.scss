@@ -1,0 +1,34 @@
+@import "./scss/reset";
+@import './scss/variables';
+@import './scss/mixins';
+
+body{
+  background-image: linear-gradient(to top, $clr-primary-1 0%, $clr-grey-9 100%);
+  // min-height: 100vh;
+  background-color: $clr-primary-9;
+  overflow: auto;
+
+  
+}
+.buttons{
+  @include flex(row,center,1rem,center);
+  
+  & button{
+    padding: .5rem;
+    margin: 1rem;
+    border-radius: $radius;
+    background-color: $clr-primary-1;
+    border: none;
+    transition: $transition;
+    cursor: pointer;
+    &:hover{
+      transform: scale(.9);
+    }
+    &:last-child{
+      background-color: $clr-grey-9;
+      color:$clr-grey-1;
+      border:1px solid $clr-grey-1
+    }
+
+  }
+}
